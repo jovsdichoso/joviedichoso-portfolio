@@ -22,9 +22,9 @@ export default {
           card: '#f8f8f8',
           border: '#e5e5e5',
         },
-        primary: '#a855f7',
-        'primary-dark': '#9333ea',
-        accent: '#22d3ee',
+        primary: '#ffffff',
+        'primary-dark': '#e5e5e5',
+        accent: '#a3a3a3',
         muted: '#94a3b8',
       }
     },
