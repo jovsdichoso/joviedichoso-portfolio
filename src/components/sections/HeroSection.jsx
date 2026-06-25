@@ -29,7 +29,7 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="flex justify-center md:hidden"
             >
-              <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border border-white/10 group/img">
+              <div className="w-56 sm:w-64 rounded-2xl overflow-hidden border border-white/10 group/img" style={{ aspectRatio: '5/7' }}>
                 <img
                   src="/profile.jpg"
                   alt={PERSONAL_INFO.name}
@@ -43,8 +43,8 @@ export default function HeroSection() {
 
               {/* Availability badge */}
               <motion.div {...fadeUp(0.1)} className="flex justify-center md:justify-start">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20 tracking-wide">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 text-white rounded-full text-xs font-medium border border-white/10 tracking-wide">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                   Available for opportunities
                 </span>
               </motion.div>
@@ -156,12 +156,12 @@ export default function HeroSection() {
             >
               <div className="relative">
                 {/* Subtle glow ring behind image */}
-                <div className="absolute inset-0 rounded-2xl bg-primary/10 blur-2xl scale-110 pointer-events-none" />
-                <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border border-white/10 group/img">
+                <div className="absolute inset-0 rounded-2xl bg-white/5 blur-2xl scale-110 pointer-events-none" />
+                <div className="relative w-80 lg:w-96 rounded-2xl overflow-hidden border border-white/10 group/img" style={{ aspectRatio: '5/7' }}>
                   <img
                     src="/profile.jpg"
                     alt={PERSONAL_INFO.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
                   />
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
         onClick={() => scrollToSection('featured')}
-        className="mb-8 text-gray-600 hover:text-primary transition-colors flex flex-col items-center gap-1.5"
+        className="mb-8 text-gray-600 hover:text-white transition-colors flex flex-col items-center gap-1.5"
         aria-label="Scroll down"
       >
         <span className="text-xs tracking-widest uppercase">Scroll</span>
