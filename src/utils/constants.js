@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   location: "Philippines",
   linkedin: "https://linkedin.com/in/joviedichoso",
   github: "https://github.com/jovsdichoso",
-  resume: "/resume.pdf"
+  resume: "/cv_joviedichoso.pdf"
 };
 
 export const SKILLS = {
@@ -128,21 +128,39 @@ export const EDUCATION = [
 export const ACHIEVEMENTS = [
   {
     id: 1,
-    title: "Best Capstone Project",
+    title: "Best Capstone Project Award",
     description: "HakbangQuest",
+    issuer: "The Lewis College",
     year: "2026",
-    icon: "Trophy"
+    icon: "Trophy",
+    image: "/certificates/bestcapstone.jpg",
+    file: "/certificates/Bestcapstone.pdf"
   },
   {
     id: 2,
     title: "Imelda Nicolas Academic Distinction Award",
+    issuer: "The Lewis College",
     year: "2026",
-    icon: "Award"
+    icon: "Award",
+    image: "/certificates/inada.jpg",
+    file: "/certificates/INADA.pdf"
   },
   {
     id: 3,
+    title: "Design Thinking and Mobile App Wireframing",
+    issuer: "DICT Region V",
+    year: "2025",
+    icon: "FileText",
+    image: "/certificates/dict.jpg",
+    file: "/certificates/DICT.pdf"
+  },
+  {
+    id: 4,
     title: "BITSCON Participant",
+    issuer: "BITSCON",
     year: "2023",
-    icon: "Award"
+    icon: "FileText",
+    image: "/certificates/bitscon.jpg",
+    file: "/certificates/bitscon.pdf"
   }
 ];
