@@ -89,22 +89,7 @@ export const PROJECTS = [
     description: "Personal growth tracking app for habits and daily reflections.",
     image: "/projects/growthjournal.png",
     tech: ["React Native", "Expo", "Firebase"],
-    github: "#" // Hidden source code
-  },
-  {
-    id: 5,
-    title: "Growth Journal",
-    description: "Personal growth tracking app for habits and daily reflections.",
-    image: "/projects/growthjournal.png",
-    tech: ["React Native", "Expo", "Firebase"],
-    github: "#" // Hidden source code
-  },
-  {
-    id: 6,
-    title: "Growth Journal",
-    description: "Personal growth tracking app for habits and daily reflections.",
-    image: "/projects/growthjournal.png",
-    tech: ["React Native", "Expo", "Firebase"],
+    liveUrl: "https://growthjournal-web.vercel.app/",
     github: "#" // Hidden source code
   }
 ];
