@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Github, Star, ExternalLink } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react'; // Removed Github import
 import { FEATURED_PROJECT } from '../../utils/constants';
 
 export default function FeaturedProjectSection() {
   return (
-    <section id="featured" className="py-24 px-4">
+    <section id="featured" className="py-24 px-4 bg-dark-card">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,28 +58,7 @@ export default function FeaturedProjectSection() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {/* Primary — View Code */}
-                <motion.a
-                  href={FEATURED_PROJECT.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white overflow-hidden
-                    bg-white/15 backdrop-blur-xl border border-white/25
-                    shadow-[0_0_20px_rgba(255,255,255,0.06)]
-                    hover:bg-white/20 hover:border-white/40
-                    hover:shadow-[0_0_28px_rgba(255,255,255,0.1)]
-                    transition-all duration-300"
-                >
-                  <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out" />
-                  <Github size={15} className="relative" />
-                  <span className="relative">View Code</span>
-                  <ExternalLink size={12} className="relative group-hover:translate-x-0.5 transition-transform duration-300" />
-                </motion.a>
-
-                {/* Secondary — View Live */}
+                {/* Primary — View Live (Upgraded to Primary Button Styles) */}
                 {FEATURED_PROJECT.liveUrl && (
                   <motion.a
                     href={FEATURED_PROJECT.liveUrl}
@@ -88,16 +67,16 @@ export default function FeaturedProjectSection() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                    className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium
-                      text-zinc-400 hover:text-white
-                      bg-white/5 backdrop-blur-xl border border-white/10
-                      hover:border-white/30 hover:bg-white/10
-                      shadow-[0_0_12px_rgba(255,255,255,0.03)]
-                      hover:shadow-[0_0_18px_rgba(255,255,255,0.06)]
+                    className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white overflow-hidden
+                      bg-white/15 backdrop-blur-xl border border-white/25
+                      shadow-[0_0_20px_rgba(255,255,255,0.06)]
+                      hover:bg-white/20 hover:border-white/40
+                      hover:shadow-[0_0_28px_rgba(255,255,255,0.1)]
                       transition-all duration-300"
                   >
-                    <ExternalLink size={14} />
-                    View Live
+                    <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out" />
+                    <span className="relative">View Live</span>
+                    <ExternalLink size={15} className="relative group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </motion.a>
                 )}
               </div>

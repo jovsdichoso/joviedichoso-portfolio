@@ -1,16 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PERSONAL_INFO } from '../../utils/constants';
 
 const NAV_LINKS = [
   { id: 'home',       label: 'Home' },
+  { id: 'skills',     label: 'Skills' },
+  { id: 'services',   label: 'Services' },
   { id: 'featured',   label: 'Featured' },
   { id: 'projects',   label: 'Projects' },
-  { id: 'skills',     label: 'Skills' },
   { id: 'experience', label: 'Experience' },
-  { id: 'awards',     label: 'Awards' },
-  { id: 'education',  label: 'Education' },
-  { id: 'contact',    label: 'Contact' },
+  { id: 'awards',     label: 'Awards' }
+  // Contact removed since the "Hire Me" button handles it
 ];
 
 const IDS = NAV_LINKS.map((l) => l.id);
@@ -157,29 +156,41 @@ export default function Navbar() {
               <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
             </button>
 
-            {/* Desktop nav — untouched */}
-            <div className="hidden md:flex items-center gap-1">
-              {NAV_LINKS.map((link) => {
-                const isActive = activeSection === link.id;
-                return (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                      isActive ? 'text-primary' : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    {link.label}
-                    {isActive && (
-                      <motion.span
-                        layoutId="nav-pill"
-                        className="absolute inset-0 rounded-lg bg-primary/10"
-                        transition={{ type: 'spring', duration: 0.35, bounce: 0.15 }}
-                      />
-                    )}
-                  </button>
-                );
-              })}
+            {/* Desktop nav + Hire Me Button */}
+            <div className="hidden md:flex items-center gap-6">
+              <div className="flex items-center gap-1">
+                {NAV_LINKS.map((link) => {
+                  const isActive = activeSection === link.id;
+                  return (
+                    <button
+                      key={link.id}
+                      onClick={() => scrollToSection(link.id)}
+                      className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                        isActive ? 'text-primary' : 'text-gray-400 hover:text-white'
+                      }`}
+                    >
+                      {link.label}
+                      {isActive && (
+                        <motion.span
+                          layoutId="nav-pill"
+                          className="absolute inset-0 rounded-lg bg-primary/10"
+                          transition={{ type: 'spring', duration: 0.35, bounce: 0.15 }}
+                        />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+              
+              {/* Desktop "Hire Me" Button */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection('contact')}
+                className="px-5 py-2 rounded-xl bg-white text-black text-sm font-bold border border-white hover:bg-transparent hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_25px_rgba(255,255,255,0.3)]"
+              >
+                Hire Me
+              </motion.button>
             </div>
 
             {/* Animated hamburger */}
@@ -191,7 +202,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Full-screen mobile overlay — sits below the 64px navbar */}
+      {/* Full-screen mobile overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -234,7 +245,7 @@ export default function Navbar() {
                     >
                       {link.label}
 
-                      {/* Animated underline — primary colour for active, white for hover */}
+                      {/* Animated underline */}
                       <motion.span
                         custom={i}
                         variants={underlineVariants}
@@ -242,7 +253,7 @@ export default function Navbar() {
                         animate={isActive ? 'open' : 'closed'}
                         className="absolute bottom-2 left-0 right-0 h-px bg-primary origin-left"
                       />
-                      {/* Hover underline (CSS only, no JS needed) */}
+                      {/* Hover underline */}
                       {!isActive && (
                         <span className="absolute bottom-2 left-0 right-0 h-px bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                       )}
@@ -252,7 +263,22 @@ export default function Navbar() {
               })}
             </ul>
 
-            {/* Bottom number count — subtle premium touch */}
+            {/* Mobile "Hire Me" Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.4 }}
+              className="mt-10"
+            >
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="px-8 py-3 rounded-2xl bg-white text-black text-lg font-bold border border-white hover:bg-transparent hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)]"
+              >
+                Hire Me
+              </button>
+            </motion.div>
+
+            {/* Bottom number count */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

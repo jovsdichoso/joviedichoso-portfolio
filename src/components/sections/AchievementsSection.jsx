@@ -20,7 +20,7 @@ export default function AchievementsSection() {
   };
 
   return (
-    <section id="awards" className="py-24 px-4 bg-dark-card">
+    <section id="awards" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div

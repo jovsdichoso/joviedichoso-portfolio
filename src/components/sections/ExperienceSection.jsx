@@ -4,7 +4,7 @@ import { EXPERIENCE } from '../../utils/constants';
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-24 px-4">
+    <section id="experience" className="py-24 px-4 bg-dark-card">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export default function ExperienceSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
-            className="bg-dark-card p-6 rounded-2xl border border-dark-border hover:border-white/20 transition-all duration-300 mb-4 last:mb-0"
+            className="p-6 rounded-2xl border border-dark-border hover:border-white/20 transition-all duration-300 mb-4 last:mb-0"
           >
             <div className="flex items-start justify-between mb-4 flex-wrap gap-4">
               <div className="flex items-start gap-4">

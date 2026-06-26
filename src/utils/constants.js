@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
   phone: "+63 966 897 0989",
   location: "Philippines",
   linkedin: "https://linkedin.com/in/joviedichoso",
-  github: "https://github.com/jovsdichoso",
+  github: "https://github.com/jovsdichoso", // Kept your profile link for networking
   resume: "/cv_joviedichoso.pdf"
 };
 
@@ -43,7 +43,7 @@ export const FEATURED_PROJECT = {
   title: "HakbangQuest",
   description: "Award-winning gamified fitness tracking application built with React Native and Firebase. Features real-time GPS tracking, route recording, achievement system, and gamified XP progression to motivate users to stay active.",
   image: "/projects/hakbangquest.png",
-  github: "https://github.com/joviedichoso/hakbangquest",
+  github: "#", // Hidden source code
   liveUrl: "https://hakbang-quest-web.vercel.app/",
   tech: ["React Native", "Expo", "Firebase", "Tailwind CSS", "Google Maps API"],
   features: [
@@ -63,7 +63,7 @@ export const PROJECTS = [
     description: "Gamified fitness tracking app with GPS, achievements, and XP system.",
     image: "/projects/hakbangquest.png",
     tech: ["React Native", "Expo", "Firebase"],
-    github: "https://github.com/jovsdichoso/HakbangQuest",
+    github: "#", // Hidden source code
     liveUrl: "https://hakbang-quest-web.vercel.app/"
   },
   {
@@ -80,7 +80,7 @@ export const PROJECTS = [
     description: "Real-time polling application with live voting and instant synchronization.",
     image: "/projects/quaestio.png",
     tech: ["React Native", "Expo", "Firebase", "Tailwind CSS"],
-    github: "https://github.com/joviedichoso/quaestio",
+    github: "#", // Hidden source code
     liveUrl: "https://play.google.com/store/apps/details?id=com.quaestio.app.a1b2c3d4"
   },
   {
@@ -89,7 +89,23 @@ export const PROJECTS = [
     description: "Personal growth tracking app for habits and daily reflections.",
     image: "/projects/growthjournal.png",
     tech: ["React Native", "Expo", "Firebase"],
-    github: "https://github.com/jovsdichoso/GrowthJournal"
+    github: "#" // Hidden source code
+  },
+  {
+    id: 5,
+    title: "Growth Journal",
+    description: "Personal growth tracking app for habits and daily reflections.",
+    image: "/projects/growthjournal.png",
+    tech: ["React Native", "Expo", "Firebase"],
+    github: "#" // Hidden source code
+  },
+  {
+    id: 6,
+    title: "Growth Journal",
+    description: "Personal growth tracking app for habits and daily reflections.",
+    image: "/projects/growthjournal.png",
+    tech: ["React Native", "Expo", "Firebase"],
+    github: "#" // Hidden source code
   }
 ];
 
@@ -110,18 +126,36 @@ export const EXPERIENCE = [
   }
 ];
 
-export const EDUCATION = [
+export const SERVICES = [
   {
     id: 1,
-    degree: "Bachelor of Science in Information Technology",
-    school: "The Lewis College",
-    type: "College"
+    title: "Web Development",
+    icon: "Globe", 
+    description: "Need an awesome website? I build fast, responsive, and good-looking web apps that your users will love. Let's bring your ideas to life on the web!"
   },
   {
     id: 2,
-    degree: "Senior High School – STEM Strand",
-    school: "Arellano University – Juan Sumulong Campus",
-    type: "Senior High School"
+    title: "Mobile App Development",
+    icon: "Smartphone",
+    description: "Got an app idea? I can help you build smooth, cross-platform mobile apps so your users can take your amazing product anywhere they go."
+  },
+  {
+    id: 3,
+    title: "UI/UX Design",
+    icon: "Palette",
+    description: "Great code needs great design! I create clean, intuitive, and eye-catching interfaces that make using your app a total breeze."
+  },
+  {
+    id: 4,
+    title: "Tech Support & Troubleshooting",
+    icon: "Wrench",
+    description: "Tech acting up? Don't sweat it! I'm here to squash bugs, fix glitches, and keep your hardware and software running super smoothly."
+  },
+  {
+    id: 5,
+    title: "Database Design",
+    icon: "Database",
+    description: "Every great app needs a solid foundation. I design secure and organized databases to keep your data safe, structured, and easy to access."
   }
 ];
 
@@ -158,7 +192,7 @@ export const ACHIEVEMENTS = [
     id: 4,
     title: "BITSCON Participant",
     issuer: "BITSCON",
-    year: "2023",
+    year: "2024",
     icon: "FileText",
     image: "/certificates/bitscon.jpg",
     file: "/certificates/bitscon.pdf"
