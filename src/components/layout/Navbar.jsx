@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { id: 'projects',   label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'awards',     label: 'Awards' }
-  // Contact removed since the "Hire Me" button handles it
 ];
 
 const IDS = NAV_LINKS.map((l) => l.id);
@@ -156,7 +155,7 @@ export default function Navbar() {
               <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
             </button>
 
-            {/* Desktop nav + Hire Me Button */}
+            {/* Desktop nav + Glassmorphic Hire Me Button */}
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-1">
                 {NAV_LINKS.map((link) => {
@@ -187,9 +186,16 @@ export default function Navbar() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('contact')}
-                className="px-5 py-2 rounded-xl bg-white text-black text-sm font-bold border border-white hover:bg-transparent hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:shadow-[0_0_25px_rgba(255,255,255,0.3)]"
+                className="group relative px-5 py-2 rounded-xl text-sm font-bold text-white overflow-hidden
+                  bg-white/10 backdrop-blur-xl border border-white/20
+                  shadow-[0_0_15px_rgba(255,255,255,0.05)]
+                  hover:bg-white/20 hover:border-white/50
+                  hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]
+                  transition-all duration-300"
               >
-                Hire Me
+                {/* Animated shine sweep on hover */}
+                <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-in-out" />
+                <span className="relative tracking-wide">Hire Me</span>
               </motion.button>
             </div>
 
@@ -272,9 +278,16 @@ export default function Navbar() {
             >
               <button
                 onClick={() => scrollToSection('contact')}
-                className="px-8 py-3 rounded-2xl bg-white text-black text-lg font-bold border border-white hover:bg-transparent hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)]"
+                className="group relative px-8 py-3 rounded-2xl text-lg font-bold text-white overflow-hidden
+                  bg-white/10 backdrop-blur-xl border border-white/20
+                  shadow-[0_0_15px_rgba(255,255,255,0.05)]
+                  hover:bg-white/20 hover:border-white/50
+                  hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]
+                  transition-all duration-300"
               >
-                Hire Me
+                {/* Animated shine sweep on hover */}
+                <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-in-out" />
+                <span className="relative tracking-wide">Hire Me</span>
               </button>
             </motion.div>
 

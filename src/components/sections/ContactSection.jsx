@@ -81,18 +81,19 @@ export default function ContactSection() {
                 ></textarea>
               </div>
 
-              {/* Submit Button */}
+              {/* Submit Button - Restored to Glassmorphism */}
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold text-black overflow-hidden
-                  bg-white border-2 border-white
-                  shadow-[0_0_20px_rgba(255,255,255,0.1)]
-                  hover:shadow-[0_0_30px_rgba(255,255,255,0.25)]
+                className="group relative w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold text-white overflow-hidden
+                  bg-white/10 backdrop-blur-xl border border-white/20
+                  shadow-[0_0_16px_rgba(255,255,255,0.05)]
+                  hover:bg-white/20 hover:border-white/50
+                  hover:shadow-[0_0_22px_rgba(255,255,255,0.15)]
                   transition-all duration-300 mt-4"
               >
-                <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-black/10 to-transparent transition-transform duration-700 ease-in-out" />
+                <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-in-out" />
                 <span className="relative tracking-wide">Send Inquiry</span>
                 <Send size={18} className="relative group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </motion.button>
